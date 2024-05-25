@@ -136,6 +136,101 @@ ALTER TABLE produit
         REFERENCES magasin ( id_magasin );
 
 
+BEGIN
+ ORDS.enable_schema(
+   p_enabled             => TRUE,
+   p_schema              => 'RESTSCOTT',
+   p_url_mapping_type    => 'BASE_PATH',
+   p_url_mapping_pattern => 'hr2',
+   p_auto_rest_auth      => FALSE
+ );
+
+  COMMIT;
+END;
+/
+
+
+BEGIN
+ ORDS.enable_object (
+   p_enabled      => TRUE,
+   p_schema       => 'RESTSCOTT',
+   p_object       => 'MAGASIN',
+   p_object_type  => 'TABLE',
+   p_object_alias => 'magasin'
+ );
+
+  COMMIT;
+END;
+/
+
+
+BEGIN
+ ORDS.enable_object (
+   p_enabled      => TRUE,
+   p_schema       => 'RESTSCOTT',
+   p_object       => 'ADMINISTRATION_AIDE',
+   p_object_type  => 'TABLE',
+   p_object_alias => 'administration_aide'
+ );
+
+  COMMIT;
+END;
+/
+
+
+
+BEGIN
+ ORDS.enable_object (
+   p_enabled      => TRUE,
+   p_schema       => 'RESTSCOTT',
+   p_object       => 'PRODUIT',
+   p_object_type  => 'TABLE',
+   p_object_alias => 'produit'
+ );
+
+  COMMIT;
+END;
+/
+
+
+
+BEGIN
+ ORDS.enable_object (
+   p_enabled      => TRUE,
+   p_schema       => 'RESTSCOTT',
+   p_object       => 'LIVRAISON',
+   p_object_type  => 'TABLE',
+   p_object_alias => 'livraison'
+ );
+
+  COMMIT;
+END;
+/
+
+
+BEGIN
+ ORDS.enable_object (
+   p_enabled      => TRUE,
+   p_schema       => 'RESTSCOTT',
+   p_object       => 'CLIENT',
+   p_object_type  => 'TABLE',
+   p_object_alias => 'client'
+ );
+
+  COMMIT;
+END;
+/
+
+
+SELECT *
+FROM user_ords_schemas;
+
+
+SELECT *
+FROM user_ords_enabled_objects;
+
+
+
 
 -- Rapport r�capitulatif d'Oracle SQL Developer Data Modeler : 
 -- 
