@@ -9,6 +9,8 @@
 
 -- predefined type, no DDL - XMLTYPE
 
+-- Ce code va creer la table administration_aide
+
 CREATE TABLE administration_aide (
     id_admin            NUMBER NOT NULL,
     prenom_admin        VARCHAR2(40) NOT NULL,
@@ -20,6 +22,8 @@ CREATE TABLE administration_aide (
 
 ALTER TABLE administration_aide ADD CONSTRAINT administration_aide_pk PRIMARY KEY ( id_admin );
 
+-- L'insertion des donnees dans la table administration_aide
+
 INSERT INTO administration_aide (id_admin,prenom_admin,nom_admin,email_admin,telephone_admin,disponibilite_admin) VALUES (5000,'Chantal','Dumers','chantaldumers@gmail.com','438-529-1000','faible');
 INSERT INTO administration_aide (id_admin,prenom_admin,nom_admin,email_admin,telephone_admin,disponibilite_admin) VALUES (5001,'Laurent','Lamontagne','laurentlamontagne@gmail.com','438-643-5260','moyenne');
 INSERT INTO administration_aide (id_admin,prenom_admin,nom_admin,email_admin,telephone_admin,disponibilite_admin) VALUES (5002,'Maxime','Tremblay','maximetremblay@gmail.com','514-272-2719','moyenne');
@@ -30,6 +34,8 @@ COMMIT;
 
 SELECT *
 FROM administration_aide;
+
+-- Ce code va creer la table client
 
 CREATE TABLE client (
     id_client                    NUMBER NOT NULL,
@@ -44,6 +50,8 @@ CREATE TABLE client (
 
 ALTER TABLE client ADD CONSTRAINT client_pk PRIMARY KEY ( id_client );
 
+-- L'insertion des donnees dans la table client
+
 INSERT INTO  client (id_client,prenom_client,nom_client,adresse_client,telephone_client,livraison_id_livreur,administration_aide_id_admin,magasin_id_magasin) VALUES (001,'Loic','Desjardins','6000 Rue Saint Pierre Montreal','438-716-0159',10001,5000,100000);
 INSERT INTO  client (id_client,prenom_client,nom_client,adresse_client,telephone_client,livraison_id_livreur,administration_aide_id_admin,magasin_id_magasin) VALUES (002,'Guillaume','Lessard','7159 Rue Saint Catherine Montreal','514-317-4123',10001,5003,100000);
 INSERT INTO  client (id_client,prenom_client,nom_client,adresse_client,telephone_client,livraison_id_livreur,administration_aide_id_admin,magasin_id_magasin) VALUES (003,'Alex','Martel','6 Fourth St Mount Pearl','709-113-4197',10001,5003,100001);
@@ -57,6 +65,8 @@ COMMIT;
 SELECT *
 FROM client;
 
+-- Ce code va creer la table livraison
+
 CREATE TABLE livraison (
     id_livreur             NUMBER NOT NULL,
     prenom_livreur         VARCHAR2(60) NOT NULL,
@@ -67,6 +77,8 @@ CREATE TABLE livraison (
 
 ALTER TABLE livraison ADD CONSTRAINT livraison_pk PRIMARY KEY ( id_livreur );
 
+-- L'insertion des donnees dans la table livraison
+
 INSERT INTO  livraison (id_livreur,prenom_livreur,nom_livreur,disponibilite_province,magasin_id_magasin) VALUES (10001,'Carlos','Homard','Quebec',100000);
 INSERT INTO  livraison (id_livreur,prenom_livreur,nom_livreur,disponibilite_province,magasin_id_magasin) VALUES (10002,'Omar','Boudreau','Terre Neuve Labrador',100001);
 INSERT INTO  livraison (id_livreur,prenom_livreur,nom_livreur,disponibilite_province,magasin_id_magasin) VALUES (10003,'Jeanne','Boisvert','Ontario',100002);
@@ -75,12 +87,16 @@ COMMIT;
 SELECT *
 FROM livraison;
 
+-- Ce code va creer la table magasin
+
 CREATE TABLE magasin (
     id_magasin            NUMBER NOT NULL,
     lieu_magasin_province VARCHAR2(60) NOT NULL
 );
 
 ALTER TABLE magasin ADD CONSTRAINT magasin_pk PRIMARY KEY ( id_magasin );
+
+-- L'insertion des donnees dans la table magasin
 
 INSERT INTO  magasin (id_magasin,lieu_magasin_province) VALUES (100000,'Quebec');
 INSERT INTO  magasin (id_magasin,lieu_magasin_province) VALUES (100001,'Terre Neuve Labrador');
@@ -89,6 +105,8 @@ COMMIT;
 
 SELECT *
 FROM magasin;
+
+-- Ce code va creer la table produit
 
 CREATE TABLE produit (
     id_produit           NUMBER NOT NULL,
@@ -99,6 +117,8 @@ CREATE TABLE produit (
 );
 
 ALTER TABLE produit ADD CONSTRAINT produit_pk PRIMARY KEY ( id_produit );
+
+-- L'insertion des donnees dans la table produit
 
 INSERT INTO  produit (id_produit,nom_produit,description,magasin_id_magasin,livraison_id_livreur) VALUES (101,'Ballon de Soccer','blanc,noir,rond',100000,10000);
 INSERT INTO  produit (id_produit,nom_produit,description,magasin_id_magasin,livraison_id_livreur) VALUES (102,'Ballon de Rugby','brun,blanc,ovale',100000,10000);
@@ -136,6 +156,7 @@ ALTER TABLE produit
         REFERENCES magasin ( id_magasin );
 
 
+-- Ce code va creer une URI sous l'URL qu'on pourra utiliser pour permettre l'activation des tables en mode REST
 BEGIN
  ORDS.enable_schema(
    p_enabled             => TRUE,
@@ -149,6 +170,7 @@ BEGIN
 END;
 /
 
+-- L'activation de la table magasin pour l'acces REST
 
 BEGIN
  ORDS.enable_object (
@@ -163,6 +185,7 @@ BEGIN
 END;
 /
 
+-- L'activation de la table administration_aide pour l'acces REST
 
 BEGIN
  ORDS.enable_object (
@@ -177,7 +200,7 @@ BEGIN
 END;
 /
 
-
+-- L'activation de la table produit pour l'acces REST
 
 BEGIN
  ORDS.enable_object (
@@ -192,6 +215,7 @@ BEGIN
 END;
 /
 
+-- L'activation de la table livraison pour l'acces REST
 
 
 BEGIN
@@ -207,6 +231,7 @@ BEGIN
 END;
 /
 
+-- L'activation de la table client pour l'acces REST
 
 BEGIN
  ORDS.enable_object (
@@ -221,10 +246,12 @@ BEGIN
 END;
 /
 
+-- Ce code confirmera l'activation su schema
 
 SELECT *
 FROM user_ords_schemas;
 
+-- Ce code confirmera l'activation des tables pour l'acces REST
 
 SELECT *
 FROM user_ords_enabled_objects;
@@ -232,7 +259,7 @@ FROM user_ords_enabled_objects;
 
 
 
--- Rapport r�capitulatif d'Oracle SQL Developer Data Modeler : 
+-- Rapport recapitulatif d'Oracle SQL Developer Data Modeler : 
 -- 
 -- CREATE TABLE                             5
 -- CREATE INDEX                             0
