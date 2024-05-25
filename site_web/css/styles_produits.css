@@ -31,5 +31,26 @@ footer
   font-size: 20px;
   padding-bottom: 5px;  
 }
+#Produit-recherche
+{
+  display: flex;
+  justify-content:center;
+   align-items: center;
+  color: black;
+  height: 100px;
+  
+}
+#formulaire-recherche 
+{
+text-align: center;
+
+
+}
+
+
+
+
+
+
 
 
