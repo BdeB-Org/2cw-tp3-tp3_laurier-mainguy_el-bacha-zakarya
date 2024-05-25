@@ -13,7 +13,6 @@
         <nav>
            <ul>
               <li><a href="../index.html">Accueil du site</a></li>
-              <li><a href="./produits_sport.html">Nos produits</a></li>
               <li><a href="./aide.html">Demander de l'aide</a></li>
            </ul>
         </nav>
@@ -21,10 +20,18 @@
 
     
     <!--Début de la balise section pour la recher des produits et leurs détails-->
-    <section id="Produit recherche"></section>
-       <section id="Details_Produits">
+    <section id="Produit recherche">
+        <form action="javascript:RechercheProduit()" id="formulaire-recherche">
+            Recherche Produits :      
+              <input id="recherche" type="text" name="recherche"/><br>
+              <input type="submit" value="Submit"/>
+        </form>
+    </section>
+       
+    <section id="Details_Produits">
+           
 
-       </section>
+    </section>
 
 
 
@@ -37,6 +44,6 @@
 
 
 
-
+<script src="../javascript/produits_sport.js"></script>
 </body>
 </html>
