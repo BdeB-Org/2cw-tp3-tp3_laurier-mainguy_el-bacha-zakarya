@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page des Produits</title>
     <link rel="stylesheet" href="/site_web/css/styles_produits.css">
+    <script src="../javascript/produits_sport.js"></script>
 </head>
 <body>
     <!--Début la balise header et navigation-->
@@ -20,30 +21,21 @@
 
     
     <!--Début de la balise section pour la recher des produits et leurs détails-->
-    <section id="Produit-recherche">
-        <form action="javascript:RechercheProduit()" id="formulaire-recherche">
-            Recherche Produits :<br>     
-              <input id="recherche" type="text" name="recherche"/><br>
-              <input type="submit" value="Submit"/>
-        </form>
-    </section>
+<section id="Produit-Affichage">
+        <input type="button"   value="Afficher les produits"/>
+    <span id="Produit-Affichages">
+      <ul id="produits"></ul>
+    </span>
+</section>
        
-    <section id="Details_Produits">
-           
+    
 
-    </section>
-
-
-
-
-
-    <!--Début de la balise pour le bas de page-->   
+<!--Début de la balise pour le bas de page-->   
 <footer>
     <p>Magasin de Sport au Québec</p>
 </footer>
 
 
 
-<script src="../javascript/produits_sport.js"></script>
 </body>
 </html>
