@@ -40,21 +40,25 @@ nav {
  }
 
 .container {
-   padding: 0em 10em 0 4em;
+   padding: 0em 5em 0em 5em;
    width: 60%;
    margin: 1em auto;
   background-color: #fff;
 }
 .container-aide {
+  padding: 2px;
    width: 50%;
    height: 280px;
-   width: 280px;
-   vertical-align: top;
+   width: 430px;
    background-color: #fff;
    display: inline-block;
  }
+ .container-map{
+  display: inline-block;
+  margin: 40px 2px 0px 70px;
+ }
 
 .container span, p {
-  margin: 0.6em;
+  margin: 0.7em;
 }
 
