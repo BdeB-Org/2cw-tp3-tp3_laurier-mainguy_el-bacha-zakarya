@@ -20,9 +20,12 @@ footer
    width: 60%;
    margin: 1em auto;
    background-color: #fff;
-   padding: 0em 0em 35em 0em;
+   padding: 0em 0em 7em 0em;
    padding-top: 11px;
    color: #333;   
+}
+.début{
+  font-size: 32px;
 }
 nav {
    text-align: center;
@@ -36,6 +39,10 @@ nav {
    color: #fff;
    padding:  10px;
    text-decoration: none;
+ }
+
+ #map{
+  width: 400px;
  }
 
  
