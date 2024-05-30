@@ -5,7 +5,7 @@ body
 }
 header
 {
- background-color: #333;
+ background-color: #444;
  text-align: center;
  padding: 5px;
 }
@@ -23,23 +23,37 @@ nav ul li a
    color: white;
    font-size: 20px;
 }
+#Produit-Affichage {
+  text-align: center;
+  margin: 20px 0;
+}
+#Produit-Affichages {
+  margin-top: 20px;
+  text-align: left; 
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+}
+#produits{
+background-color:bisque;
+margin: 20px 0;
+border: 5px solid black;
+border-radius: 5px;
+font-family:'Times New Roman', Times, serif;
+font-size: 20px;
+color: #333;
+}
 footer
 {
   background-color: #333;
   color: white;
   text-align: center;
   font-size: 20px;
-  padding-bottom: 5px;  
+  padding: 5px 5px 5px 5px;  
+  margin: 0;
 }
-#Produit-Affichage
-{
-  display: flex;
-  justify-content:center;
-   align-items: center;
-  color: black;
-  height: 100px;
-  
-}
+
+
 
 
 
