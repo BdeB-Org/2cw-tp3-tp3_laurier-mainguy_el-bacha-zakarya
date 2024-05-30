@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page des Produits</title>
     <link rel="stylesheet" href="/site_web/css/styles_produits.css">
-    <script src="../javascript/produits_sport.js"></script>
+    <script src="../javascript/produits_sport.js"defer></script>
 </head>
 <body>
     <!--Début la balise header et navigation-->
@@ -22,7 +22,7 @@
     
     <!--Début de la balise section pour la recher des produits et leurs détails-->
 <section id="Produit-Affichage">
-        <input type="button"   value="Afficher les produits"/>
+        <input type="button" onclick="AfficherProduit()" value="Afficher les produits"/>
     <span id="Produit-Affichages">
       <ul id="produits"></ul>
     </span>

@@ -31,7 +31,7 @@ footer
   font-size: 20px;
   padding-bottom: 5px;  
 }
-#Produit-recherche
+#Produit-Affichage
 {
   display: flex;
   justify-content:center;
@@ -40,12 +40,8 @@ footer
   height: 100px;
   
 }
-#formulaire-recherche 
-{
-text-align: center;
 
 
-}
 
 
 
