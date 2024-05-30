@@ -27,9 +27,9 @@ ALTER TABLE administration_aide ADD CONSTRAINT administration_aide_pk PRIMARY KE
 INSERT INTO administration_aide (id_admin,prenom_admin,nom_admin,email_admin,telephone_admin,disponibilite_admin) VALUES (5000,'Chantal','Dumers','chantaldumers@gmail.com','438-529-1000','faible');
 INSERT INTO administration_aide (id_admin,prenom_admin,nom_admin,email_admin,telephone_admin,disponibilite_admin) VALUES (5001,'Laurent','Lamontagne','laurentlamontagne@gmail.com','438-643-5260','moyenne');
 INSERT INTO administration_aide (id_admin,prenom_admin,nom_admin,email_admin,telephone_admin,disponibilite_admin) VALUES (5002,'Maxime','Tremblay','maximetremblay@gmail.com','514-272-2719','moyenne');
-INSERT INTO administration_aide (id_admin,prenom_admin,nom_admin,email_admin,telephone_admin,disponibilite_admin) VALUES (5003,'Leo,Ouellet','leoouellet@gmail.com','514-671-4409','elevee');
+INSERT INTO administration_aide (id_admin,prenom_admin,nom_admin,email_admin,telephone_admin,disponibilite_admin) VALUES (5003,'Leo','Ouellet','leoouellet@gmail.com','514-671-4409','elevee');
 INSERT INTO administration_aide (id_admin,prenom_admin,nom_admin,email_admin,telephone_admin,disponibilite_admin) VALUES (5004,'Martin','Piche','martinpiche@gmail.com','438-719-3410','faible');
-INSERT INTO administration_aide (id_admin,prenom_admin,nom_admin,email_admin,telephone_admin,disponibilite_admin) VALUES (5005,'Francine,Belanger','francinebelanger@gmail.com','514-715-1151','elevee');
+INSERT INTO administration_aide (id_admin,prenom_admin,nom_admin,email_admin,telephone_admin,disponibilite_admin) VALUES (5005,'Francine','Belanger','francinebelanger@gmail.com','514-715-1151','elevee');
 COMMIT;
 
 SELECT *
@@ -52,14 +52,14 @@ ALTER TABLE client ADD CONSTRAINT client_pk PRIMARY KEY ( id_client );
 
 -- L'insertion des donnees dans la table client
 
-INSERT INTO  client (id_client,prenom_client,nom_client,adresse_client,telephone_client,livraison_id_livreur,administration_aide_id_admin,magasin_id_magasin) VALUES (001,'Loic','Desjardins','6000 Rue Saint Pierre Montreal','438-716-0159',10001,5000,100000);
-INSERT INTO  client (id_client,prenom_client,nom_client,adresse_client,telephone_client,livraison_id_livreur,administration_aide_id_admin,magasin_id_magasin) VALUES (002,'Guillaume','Lessard','7159 Rue Saint Catherine Montreal','514-317-4123',10001,5003,100000);
-INSERT INTO  client (id_client,prenom_client,nom_client,adresse_client,telephone_client,livraison_id_livreur,administration_aide_id_admin,magasin_id_magasin) VALUES (003,'Alex','Martel','6 Fourth St Mount Pearl','709-113-4197',10001,5003,100001);
-INSERT INTO  client (id_client,prenom_client,nom_client,adresse_client,telephone_client,livraison_id_livreur,administration_aide_id_admin,magasin_id_magasin) VALUES (004,'Justin','Hebert','66 Avenue Rd Toronto','416-192-7841',10001,5005,100002);
-INSERT INTO  client (id_client,prenom_client,nom_client,adresse_client,telephone_client,livraison_id_livreur,administration_aide_id_admin,magasin_id_magasin) VALUES (005,'Felix','Lapointe','25 Donovan St Mount Pearl','709-671-8518',10001,5005,100001);
-INSERT INTO  client (id_client,prenom_client,nom_client,adresse_client,telephone_client,livraison_id_livreur,administration_aide_id_admin,magasin_id_magasin) VALUES (006,'Edouard','Beaulieu','791 Yonge St Toronto','416-558-1241',10001,5002,100002);
-INSERT INTO  client (id_client,prenom_client,nom_client,adresse_client,telephone_client,livraison_id_livreur,administration_aide_id_admin,magasin_id_magasin) VALUES (007,'Simon','Simard','4151 Rue Saint Denis Montreal','438-664-9910',10001,5001,100000);
-INSERT INTO  client (id_client,prenom_client,nom_client,adresse_client,telephone_client,livraison_id_livreur,administration_aide_id_admin,magasin_id_magasin) VALUES (008,'Justine','Couture','9 Toope Place Mount Pearl','709-332-1227',10001,5001,100001);
+INSERT INTO  client (id_client,prenom_client,nom_client,adresse_client,telephone_client,livraison_id_livreur,administration_aide_id_admin,magasin_id_magasin) VALUES (10000001,'Loic','Desjardins','6000 Rue Saint Pierre Montreal','438-716-0159',10001,5000,100000);
+INSERT INTO  client (id_client,prenom_client,nom_client,adresse_client,telephone_client,livraison_id_livreur,administration_aide_id_admin,magasin_id_magasin) VALUES (10000002,'Guillaume','Lessard','7159 Rue Saint Catherine Montreal','514-317-4123',10001,5003,100000);
+INSERT INTO  client (id_client,prenom_client,nom_client,adresse_client,telephone_client,livraison_id_livreur,administration_aide_id_admin,magasin_id_magasin) VALUES (10000003,'Alex','Martel','6 Fourth St Mount Pearl','709-113-4197',10002,5003,100001);
+INSERT INTO  client (id_client,prenom_client,nom_client,adresse_client,telephone_client,livraison_id_livreur,administration_aide_id_admin,magasin_id_magasin) VALUES (10000004,'Justin','Hebert','66 Avenue Rd Toronto','416-192-7841',10003,5005,100002);
+INSERT INTO  client (id_client,prenom_client,nom_client,adresse_client,telephone_client,livraison_id_livreur,administration_aide_id_admin,magasin_id_magasin) VALUES (10000005,'Felix','Lapointe','25 Donovan St Mount Pearl','709-671-8518',10002,5005,100001);
+INSERT INTO  client (id_client,prenom_client,nom_client,adresse_client,telephone_client,livraison_id_livreur,administration_aide_id_admin,magasin_id_magasin) VALUES (10000006,'Edouard','Beaulieu','791 Yonge St Toronto','416-558-1241',10003,5002,100002);
+INSERT INTO  client (id_client,prenom_client,nom_client,adresse_client,telephone_client,livraison_id_livreur,administration_aide_id_admin,magasin_id_magasin) VALUES (10000007,'Simon','Simard','4151 Rue Saint Denis Montreal','438-664-9910',10001,5001,100000);
+INSERT INTO  client (id_client,prenom_client,nom_client,adresse_client,telephone_client,livraison_id_livreur,administration_aide_id_admin,magasin_id_magasin) VALUES (10000008,'Justine','Couture','9 Toope Place Mount Pearl','709-332-1227',10002,5001,100001);
 COMMIT;
 
 SELECT *
@@ -120,12 +120,12 @@ ALTER TABLE produit ADD CONSTRAINT produit_pk PRIMARY KEY ( id_produit );
 
 -- L'insertion des donnees dans la table produit
 
-INSERT INTO  produit (id_produit,nom_produit,description,magasin_id_magasin,livraison_id_livreur) VALUES (101,'Ballon de Soccer','blanc,noir,rond',100000,10000);
-INSERT INTO  produit (id_produit,nom_produit,description,magasin_id_magasin,livraison_id_livreur) VALUES (102,'Ballon de Rugby','brun,blanc,ovale',100000,10000);
-INSERT INTO  produit (id_produit,nom_produit,description,magasin_id_magasin,livraison_id_livreur) VALUES (103,'Baton de Hockey','long,bois,noir',100001,10001);
-INSERT INTO  produit (id_produit,nom_produit,description,magasin_id_magasin,livraison_id_livreur) VALUES (104,'Ballon de Volleybal','blanc,leger,rond',100001,10001);
-INSERT INTO  produit (id_produit,nom_produit,description,magasin_id_magasin,livraison_id_livreur) VALUES (105,'Protege Tibias','resistant,noir,confortable',100002,10002);
-INSERT INTO  produit (id_produit,nom_produit,description,magasin_id_magasin,livraison_id_livreur) VALUES (106,'Ballon de Basketball','orange,ligne,noir',100002,10002);
+INSERT INTO  produit (id_produit,nom_produit,description,magasin_id_magasin,livraison_id_livreur) VALUES (101,'Ballon de Soccer','blanc,noir,rond',100000,10001);
+INSERT INTO  produit (id_produit,nom_produit,description,magasin_id_magasin,livraison_id_livreur) VALUES (102,'Ballon de Rugby','brun,blanc,ovale',100000,10001);
+INSERT INTO  produit (id_produit,nom_produit,description,magasin_id_magasin,livraison_id_livreur) VALUES (103,'Baton de Hockey','long,bois,noir',100001,10002);
+INSERT INTO  produit (id_produit,nom_produit,description,magasin_id_magasin,livraison_id_livreur) VALUES (104,'Ballon de Volleybal','blanc,leger,rond',100001,10002);
+INSERT INTO  produit (id_produit,nom_produit,description,magasin_id_magasin,livraison_id_livreur) VALUES (105,'Protege Tibias','resistant,noir,confortable',100002,10003);
+INSERT INTO  produit (id_produit,nom_produit,description,magasin_id_magasin,livraison_id_livreur) VALUES (106,'Ballon de Basketball','orange,ligne,noir',100002,10003);
 COMMIT;
 
 SELECT *
