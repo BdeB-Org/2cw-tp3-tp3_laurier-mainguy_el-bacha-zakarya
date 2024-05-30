@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page d'accueil</title>
     <link rel="stylesheet" href="./css/styles_index.css">
-    <script src="./javascript/index.js"> </script>
+    <script src="./javascript/index.js"defer> </script>
 </head>
 <body>
 
@@ -31,7 +31,15 @@
               <input id="recherche" type="text" name="recherche"/><br>
               <input type="submit" value="Submit"/>
         </form>
+        <section id="client-Affichage">
+            <input type="button" onclick="AfficherClients()" value="Afficher les clients"/>
+        <span id="Client-Affichages">
+          <ul id="clients"></ul>
+        </span>
+    </section>
     </div>
+
+   
       
  
 
