@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Livraison Produits</title>
     <link rel="stylesheet" href="/site_web/css/styles_livraison.css">
+    <script src="../javascript/livraison.js">defer</script>
 </head>
 <body>
     <!--Début la balise header et navigation-->
@@ -30,7 +31,7 @@
           <input id="email" type="email" name="email"/><br>
           <label for="adresse">Adresse : </label> 
           <input id="adresse" type="text" name="adresse"/><br>
-          <input type="submit" value="Submit"/>  
+          <input type="submit" onclick="AfficherMessageLivraison()" value="Submit"/>  
         </form>
     </section>
        
