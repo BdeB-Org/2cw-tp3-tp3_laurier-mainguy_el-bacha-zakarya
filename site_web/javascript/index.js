@@ -1,6 +1,6 @@
 function Connexion(){
     let elemN=document.getElementById("recherche").value;
-    window.alert(elemN);
+    window.alert(`${elemN} est en cours d'inscription!`);
 
 }
 function createNode(element) {
