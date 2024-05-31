@@ -2,26 +2,20 @@ body
 {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
 }
-header
-{
- background-color: #444;
- text-align: center;
- padding: 5px;
+nav {
+  text-align: center;
+  padding: 1em 0;
+  justify-content: center;
+  background-color: #444;
+  color: #fff;
 }
-header h1
-{
-   font-size: 42px;
-}
-nav ul li
-{
-   display: inline;
-   margin-right: 20px;
-}
-nav ul li a
-{
-   color: white;
-   font-size: 20px;
+nav a {
+  color: #fff;
+  padding:  10px;
+  text-decoration: none;
 }
 #Produit-Affichage {
   text-align: center;
