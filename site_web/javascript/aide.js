@@ -18,7 +18,7 @@ function createNode(element) {
           return aides.map(function (aide) {
               let li = createNode("li"),
                   span = createNode("span");
-              span.innerHTML = `Prénom : ${aide.prenom_admin} ,Nom : ${aide.nom_admin} `;
+              span.innerHTML = `Email : ${aide.email_admin},  Téléphone : ${aide.telephone_admin}`;
               append(li, span);
               append(elemA, li);
           });
