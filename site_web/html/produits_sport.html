@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page des Produits</title>
     <link rel="stylesheet" href="/site_web/css/styles_produits.css">
-    <script src="../javascript/produits_sport.js"defer></script>
+    <script src="../javascript/produits_sport.js">defer</script>
 </head>
 <body>
     <!--Début la balise header et navigation-->
@@ -15,14 +15,21 @@
            <ul>
               <li><a href="../index.html">Accueil du site</a></li>
               <li><a href="./aide.html">Demander de l'aide</a></li>
-           </ul>
+              <li><a href="./livraison_produits.html">Livraison</a></li>
+            </ul>
         </nav>
     </header>
 
     
-    <!--Début de la balise section pour la recher des produits et leurs détails-->
+    <!--Début de la balise section pour l'affichage des produits et leurs détails et aussi pour les images-->
 <section id="Produit-Affichage">
-        <input type="button" onclick="AfficherProduit()" value="Afficher les produits"/>
+    <h2><strong>Bienvenue sur la page des produits ! </strong></h2>
+    <section id="Image-Produit">
+        <img id="produit1" src="../Images/produit1.png" height="600px" alt="map" />
+        <img id="produit2" src="../Images/produit2.png" height="600px" alt="map" />
+
+    </section>    
+    <input type="button" onclick="AfficherProduit()"   value="Afficher les produits"/>
     <span id="Produit-Affichages">
       <ul id="produits"></ul>
     </span>
