@@ -9,7 +9,7 @@
 
 -- predefined type, no DDL - XMLTYPE
 
--- Ce code va creer la table administration_aide
+-- Ce code va creer la table administration_aide ( Zakarya )
 
 CREATE TABLE ADMINISTRATION_AIDE (
     id_admin            NUMBER NOT NULL,
@@ -22,7 +22,7 @@ CREATE TABLE ADMINISTRATION_AIDE (
 
 ALTER TABLE ADMINISTRATION_AIDE ADD CONSTRAINT ADMINISTRATION_AIDE_pk PRIMARY KEY ( id_admin );
 
--- L'insertion des donnees dans la table administration_aide
+-- L'insertion des donnees dans la table administration_aide ( Zakarya )
 
 INSERT INTO ADMINISTRATION_AIDE (id_admin,prenom_admin,nom_admin,email_admin,telephone_admin,disponibilite_admin) VALUES (5000,'Chantal','Dumers','chantaldumers@gmail.com','438-529-1000','faible');
 INSERT INTO ADMINISTRATION_AIDE (id_admin,prenom_admin,nom_admin,email_admin,telephone_admin,disponibilite_admin) VALUES (5001,'Laurent','Lamontagne','laurentlamontagne@gmail.com','438-643-5260','moyenne');
@@ -35,7 +35,7 @@ COMMIT;
 SELECT *
 FROM ADMINISTRATION_AIDE;
 
--- Ce code va creer la table client
+-- Ce code va creer la table client ( Zakarya )
 
 CREATE TABLE CLIENT (
     id_client                    NUMBER NOT NULL,
@@ -50,7 +50,7 @@ CREATE TABLE CLIENT (
 
 ALTER TABLE CLIENT ADD CONSTRAINT CLIENT_pk PRIMARY KEY ( id_client );
 
--- L'insertion des donnees dans la table client
+-- L'insertion des donnees dans la table client ( Zakarya )
 
 INSERT INTO  CLIENT (id_client,prenom_client,nom_client,adresse_client,telephone_client,LIVRAISON_id_livreur,ADMINISTRATION_AIDE_id_admin,MAGASIN_id_magasin) VALUES (10000001,'Loic','Desjardins','6000 Rue Saint Pierre Montreal','438-716-0159',10001,5000,100000);
 INSERT INTO  CLIENT (id_client,prenom_client,nom_client,adresse_client,telephone_client,LIVRAISON_id_livreur,ADMINISTRATION_AIDE_id_admin,MAGASIN_id_magasin) VALUES (10000002,'Guillaume','Lessard','7159 Rue Saint Catherine Montreal','514-317-4123',10001,5003,100000);
@@ -118,7 +118,7 @@ CREATE TABLE PRODUIT (
 
 ALTER TABLE PRODUIT ADD CONSTRAINT PRODUIT_pk PRIMARY KEY ( id_produit );
 
--- L'insertion des donnees dans la table produit
+-- L'insertion des données dans la table produit 
 
 INSERT INTO  PRODUIT (id_produit,nom_produit,description,MAGASIN_id_magasin,LIVRAISON_id_livreur) VALUES (101,'Ballon de Soccer','blanc,noir,rond',100000,10001);
 INSERT INTO  PRODUIT (id_produit,nom_produit,description,MAGASIN_id_magasin,LIVRAISON_id_livreur) VALUES (102,'Ballon de Rugby','brun,blanc,ovale',100000,10001);
@@ -156,7 +156,7 @@ ALTER TABLE PRODUIT
         REFERENCES MAGASIN ( id_magasin );
 
 
--- Ce code va creer une URI sous l'URL qu'on pourra utiliser pour permettre l'activation des tables en mode REST
+-- Ce code va creer une URI sous l'URL qu'on pourra utiliser pour permettre l'activation des tables en mode REST ( Zakarya )
 BEGIN
  ORDS.enable_schema(
    p_enabled             => TRUE,
@@ -170,7 +170,7 @@ BEGIN
 END;
 /
 
--- L'activation de la table magasin pour l'acces REST
+-- L'activation de la table magasin pour l'acces REST ( Zakarya )
 
 BEGIN
  ORDS.enable_object (
@@ -185,7 +185,7 @@ BEGIN
 END;
 /
 
--- L'activation de la table administration_aide pour l'acces REST
+-- L'activation de la table administration_aide pour l'acces REST ( Zakarya )
 
 BEGIN
  ORDS.enable_object (
@@ -231,7 +231,7 @@ BEGIN
 END;
 /
 
--- L'activation de la table client pour l'acces REST
+-- L'activation de la table client pour l'acces REST ( Zakarya )
 
 BEGIN
  ORDS.enable_object (
@@ -246,7 +246,7 @@ BEGIN
 END;
 /
 
--- Ce code confirmera l'activation su schema
+-- Ce code confirmera l'activation su schema ( Zakarya )
 
 SELECT *
 FROM user_ords_schemas;
