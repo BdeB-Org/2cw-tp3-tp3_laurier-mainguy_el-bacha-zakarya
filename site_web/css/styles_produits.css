@@ -27,6 +27,11 @@ nav ul li a
   text-align: center;
   margin: 20px 0;
 }
+#Produit-Affichage h2
+{
+  color:black;
+  text-align: center;
+}
 #Produit-Affichages {
   margin-top: 20px;
   text-align: left; 
@@ -51,6 +56,11 @@ footer
   font-size: 20px;
   padding: 5px 5px 5px 5px;  
   margin: 0;
+}
+#Image-Produit
+{
+  justify-content: space-around;
+  display: flex;
 }
 
 
