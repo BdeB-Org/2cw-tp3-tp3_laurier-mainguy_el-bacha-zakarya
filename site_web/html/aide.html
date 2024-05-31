@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page d'accueil</title>
     <link rel="stylesheet" href="../css/styles_aide.css">
+    <script src="../javascript/aide.js">defer </script>
 </head>
 <body>
     <header>
@@ -33,12 +34,13 @@
             <div class="container-map">
               <img id="map" src="../Images/image2.jpg" alt="map" />
             </div>
-            <section id="Aide">
-              <input type="button" onclick="AfficherAide()" value="Afficher l'aide"/>
-          <span id="Aides">
-            <ul id="aide"></ul>
-          </span>
-      </section>
+    <section id="Affichage-aide">
+
+        <input type="button" onclick="AfficherAide()" value="Afficher l'aide"/>
+        <span id="Afiichage-aides">
+           <ul id="aides"></ul>
+        </span>
+    </section>
       
         </div>
 
